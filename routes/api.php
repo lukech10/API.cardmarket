@@ -39,4 +39,10 @@ Route::prefix('ventas')->group(function () {
 
 	Route::post('/crearventa',[VentaController::class, 'createVenta'])->middleware('auth');
 	Route::get('/listado/{cardname}',[VentaController::class, 'cardsList']);
+
+});
+Route::prefix('compras')->group(function () {
+
+	Route::get('/comprar/{cardname}',[VentaController::class, 'listacompra']);
+	
 });

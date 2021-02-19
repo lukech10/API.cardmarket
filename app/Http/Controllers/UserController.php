@@ -28,7 +28,7 @@ class UserController extends Controller
 			$user = new User();
 
 			//TODO: Validar los data antes de guardar el user
-			$user->id = $data->id;
+			
 			$user->nombre = $data->nombre;
 			$user->email = $data->email;
 			$user->password = Hash::make($data->password);

@@ -10,7 +10,7 @@ class venta extends Model
     use HasFactory;
 
     public function card(){
-    	return $this->belongsTo(card::class);
+    	return $this->belongsTo(card::class, 'cards');
     }
 
     public function user(){
